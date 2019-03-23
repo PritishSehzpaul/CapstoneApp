@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:padding="16dp"
+    tools:context=".CameraActivity">
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/take_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="onTakePicture"
+        android:padding="20dp"
+        android:text="@string/take_picture"
+        app:cornerRadius="30dp" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/load_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/take_picture"
+        android:gravity="center"
+        android:onClick="loadImageFromGallery"
+        android:padding="20dp"
+        android:text="@string/load_picture"
+        app:cornerRadius="30dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/simple_drawee_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/take_picture"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/image_desc"
+        android:elevation="4dp"
+        app:placeholderImage="@drawable/ic_portrait_dark_gray_24dp"
+        app:placeholderImageScaleType="fitCenter"
+        app:roundedCornerRadius="15dp"
+        app:roundingBorderColor="@color/imageBorderColor"
+        app:roundingBorderWidth="2dp" />
+
+</RelativeLayout>

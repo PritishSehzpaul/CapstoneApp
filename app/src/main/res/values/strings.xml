@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Face Detection</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="image_desc">Image taken</string>
+    <string name="load_picture">Load Picture</string>
+    <string name="dialog_storage_permission">App needs storage permission to store pictures</string>
+</resources>
